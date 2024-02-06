@@ -10,10 +10,10 @@ int edgeDetect(double value)
 	static double messWerte[MAX];
 	int i = 0;
 
-	counter++;//Aufrufe werden gezählt bis 10
+	counter++;//Aufrufe werden gezÃ¤hlt bis 10
 	if (counter > MAX-1) {
 		counter = 0;
-		//fill((messWerte), (messWerte+10), 0.0);  //benötigt #include <algorithm>
+		//fill((messWerte), (messWerte+10), 0.0);  //benÃ¶tigt #include <algorithm>
 		for (i = 0; i < MAX-1; i++) {  // oder fill((messWerte), (messWerte+10), 0.0);
 			messWerte[i] = 0;
 			counter = 0;//zum Erfassen bereit
@@ -21,7 +21,7 @@ int edgeDetect(double value)
 	}
 
 	messWerte[counter] = value;// Messwert sichern
-
+	//if (counter == MAX-1)  i= edgeDetect(double value);
 	if (counter == MAX-1) {
 
 		if (messWerte[0] > messWerte[1]) {// test auf fallende Flanke
